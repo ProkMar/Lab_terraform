@@ -31,4 +31,4 @@ terraform.rc
 # Terraform by HashiCorp](https://www.terraform.io/language/files/dependency-lock)
 .terraform.lock.hcl
 
-user.txt
+outplan

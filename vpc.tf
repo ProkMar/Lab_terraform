@@ -3,18 +3,18 @@ resource "yandex_compute_instance" "vm-1" {
   resources {
     cores  = 2
     memory = 2
-    }
+  }
   boot_disk {
     initialize_params {
-        image_id = "fd80jfslq61mssea4ejn"
-        }
+      image_id = "fd80jfslq61mssea4ejn"
     }
+  }
   network_interface {
     subnet_id = yandex_vpc_subnet.subnet-1.id
     nat       = true
-    }
+  }
   metadata = {
-    ssh-keys = "ubuntu:${file("C:/Users/prokm/.ssh/id_rsa.pub")}"
+    ssh-keys = "prokm:${file("C:/Users/prokm/.ssh/id_ed25519.pub")}"
   }
 }
 
